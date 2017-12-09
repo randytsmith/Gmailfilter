@@ -14,7 +14,6 @@ var indexRoute = require ("./routes/index");
 var app = express();
 
 // Create application/x-www-form-urlencoded parser
-
 var urlencodedParser = bodyParser.urlencoded({ extended: true });
 app.use(cookieParser());
 app.use(bodyParser());
@@ -22,7 +21,6 @@ app.use(express.static("public"));
 app.use('/', indexRoute)
 
 mongoose.Promise = global.Promise
-
 // MongoDB Connection
 mongoose.connect(serverConfig.mongoURL, (error) => {
   if (error) {
@@ -35,11 +33,10 @@ mongoose.connect(serverConfig.mongoURL, (error) => {
 app.get("/", function(request, response) {
   response.sendFile(path.join(__dirname , "./index.html"));
 });
-
-
 app.get("/login", function(request, response) {
   response.sendFile(path.join(__dirname , "./filter.html"));
 });
+
 var listener = app.listen(3000, function() {
   console.log("Your app is listening on port " + listener.address().port);
 });
