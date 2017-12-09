@@ -1,0 +1,34 @@
+{
+  "name": "gmailforwarder",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start":"node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AdamToday/Gmailfilter.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AdamToday/Gmailfilter/issues"
+  },
+  "homepage": "https://github.com/AdamToday/Gmailfilter#readme",
+  "dependencies": {
+    "bcrypt": "^1.0.3",
+    "body-parser": "^1.18.2",
+    "cookie-parser": "^1.4.3",
+    "express": "^4.16.2",
+    "express-session": "^1.15.6",
+    "fs": "0.0.1-security",
+    "google-auth-library": "^0.12.0",
+    "googleapis": "^23.0.0",
+    "mongoose": "^4.13.6",
+    "path": "^0.12.7",
+    "readline": "^1.3.0",
+    "router": "^1.3.2"
+  }
+}
