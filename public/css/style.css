@@ -1,0 +1,51 @@
+.header {
+  background-color: #4578bb;
+  padding: 2%;
+  height: 250px;
+  width: 100%;
+  text-align: center;
+}
+.hello {
+  text-align: center;
+}
+
+p {
+  font-size: 3.5em;
+  margin: 50px auto;
+  color: #ccc;
+}
+
+.remove {
+  float:right;
+  margin-left: -50%
+}
+.userList{
+  width: 211px;
+}
+
+.format {
+  width: 600px;
+  margin: 10px auto;
+}
+.voteboard {
+  width: 500px;
+  margin: 50px auto;
+  text-align: center;
+}
+.nvoteboard {
+  width: 200px;
+  margin: 50px auto;
+}
+
+.buttonboard {
+  text-align: center;
+}
+
+.btns {
+  width: 150px;
+  margin: 20px 0px 0px 0px;
+}
+
+#list-align {
+  float: right;
+}
