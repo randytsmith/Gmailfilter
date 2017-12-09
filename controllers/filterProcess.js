@@ -50,10 +50,8 @@ function processFilter(user, response){
     // Check if we have previously stored a token.
     fs.readFile(TOKEN_PATH, function(err, token) {
       if (err) {
-        console.log("================================here is new token");
         getNewToken(oauth2Client, callback);
       } else {
-        console.log("-------------------------eisting token");
         oauth2Client.credentials = JSON.parse(token);
         callback(oauth2Client);
       }
@@ -114,10 +112,6 @@ function processFilter(user, response){
    *
    * @param {google.auth.OAuth2} auth An authorized OAuth2 client.
    */
-
-
-
-
    function getMessage(messageId, auth) {
     var gmail = google.gmail({ auth: auth, version: 'v1' });
     console.log("here is get message");
@@ -139,12 +133,8 @@ function processFilter(user, response){
         q: user.incoming[1],
         userId: 'me'
     }, function (err, results) {
-      console.log("result:",results.messages);
-      //console.log(results.messages[1].id);
       getMessage(results.messages[0].id,auth);
       getMessage(results.messages[1].id,auth);
-      //getMessage(results.messages[2].id,auth);
-
     });
   }
     response.json(user);

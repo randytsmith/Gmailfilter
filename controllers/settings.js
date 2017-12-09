@@ -2,7 +2,6 @@ var express = require("express");
 var mongoose = require("mongoose");
 var User = require("../models/admin");
 
-
 function adminSetting(request, response){
   newAddress = request.body.email;
   newPassword = request.body.password;
@@ -30,7 +29,6 @@ function allUsers(request, response){
     console.log(Users);
     response.json(Users);
   })
-
 }
 
 function userSetting(request, response){
@@ -53,12 +51,12 @@ function userSetting(request, response){
   });
 }
 
-
 function addString(request, response){
   console.log(request.body);
 
   var condition = { email : request.body.email};
-  var update = { $push: {"forwarding.string" : request.body.string,
+  var update = {
+                $push: {"forwarding.string" : request.body.string,
                         "forwarding.address" : request.body.forwarding }
                };
   var options = {

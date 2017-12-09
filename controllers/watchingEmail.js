@@ -40,8 +40,6 @@ function addAddress(request, response){
 }
 
 function addString(request, response){
-  console.log(request.body);
-
   var condition = { email : request.body.email};
   var update = { $push: {"forwarding.string" : request.body.string,
                         "forwarding.address" : request.body.forwarding }
@@ -55,9 +53,6 @@ function addString(request, response){
    response.json({result: "success"});
  });
 };
-
-
-
 
   module.exports = {
     check: watching,
